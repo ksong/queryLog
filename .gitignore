@@ -4,7 +4,6 @@ aclocal.m4
 autom4te.cache/
 compile
 config.h
-config.h.in
 *.log
 config.status
 configure
@@ -16,10 +15,10 @@ missing
 src/Makefile
 src/client/.deps/
 src/client/Makefile
-src/client/client
-src/client/client.o
+src/client/queryLog
 src/server/.deps/
 src/server/Makefile
-src/server/server
-src/server/server.o
+src/server/queryLogd
 stamp-h1
+*.o
+*.in

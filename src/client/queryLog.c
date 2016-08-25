@@ -1,5 +1,5 @@
 
-#include "client.h"
+#include "queryLog.h"
 
 int main(int argc, char *argv[])
 {

@@ -3,7 +3,7 @@
 
 AC_PREREQ([2.69])
 AC_INIT([queryLog], [1.0], [kaisong2@illinois.edu])
-AC_CONFIG_SRCDIR([src/client/client.c])
+#AC_CONFIG_SRCDIR([src/client/client.c])
 AC_CONFIG_HEADERS([config.h])
 
 AM_INIT_AUTOMAKE([1.10 -Wall no-define foreign])

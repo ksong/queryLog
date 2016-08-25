@@ -1,5 +1,5 @@
 
-#include "server.h"
+#include "queryLogd.h"
 
 int main(int argc, char *argv[])
 {
