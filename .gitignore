@@ -5,7 +5,7 @@ autom4te.cache/
 compile
 config.h
 config.h.in
-config.log
+*.log
 config.status
 configure
 depcomp
