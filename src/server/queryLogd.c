@@ -107,16 +107,16 @@ void request_handler (int sock) {
 	    exit(EXIT_FAILURE);
 	}
 	while (fgets(result, sizeof(result), cmd)) {
+	    n = write(sock,result,strlen(result));
+   
+	    if (n < 0) {
+		perror("ERROR writing to socket");
+		exit(1);
+	    }
 	    printf("%s", result);
 	}
 	pclose(cmd);
     }
     
-    n = write(sock,"I got your message",18);
-   
-    if (n < 0) {
-	perror("ERROR writing to socket");
-	exit(1);
-    }
     
 }

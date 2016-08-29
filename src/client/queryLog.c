@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
      * will be read by server
      */
     
-    printf("Please enter the message: ");
+    printf("Please enter the match pattern: ");
     bzero(buffer,256);
     fgets(buffer,255,stdin);
    
@@ -65,15 +65,18 @@ int main(int argc, char *argv[]) {
 	exit(1);
     }
    
-    /* Now read server response */
-    bzero(buffer,256);
-    n = read(sockfd, buffer, 255);
-   
-    if (n < 0) {
-	perror("ERROR reading from socket");
-	exit(1);
-    }
-    
-    printf("%s\n",buffer);
+    /* read all server response */
+    do{
+	bzero(buffer,256);
+	n = read(sockfd, buffer, 256);
+	if (n < 0) {
+	    perror("ERROR reading from socket");
+	    exit(1);
+	}
+	if(n>0){
+	    printf("%s",buffer);
+	}
+    }while(n>0);
+
     return 0;
 }
